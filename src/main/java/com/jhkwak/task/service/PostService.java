@@ -1,5 +1,6 @@
 package com.jhkwak.task.service;
 
+import com.jhkwak.task.dto.PostAllResponseDto;
 import com.jhkwak.task.dto.PostRequestDto;
 import com.jhkwak.task.dto.PostResponseDto;
 import com.jhkwak.task.entity.Post;
@@ -38,9 +39,10 @@ public class PostService {
     }
 
     // 게시글 전체 조회
-    public List<PostResponseDto> getAllPost(){
+    public List<PostAllResponseDto> getAllPost(){
+
         // DB Post 전체 데이터 조회
-        return postRepository.findAll().stream().map(PostResponseDto::new).toList();
+        return postRepository.findAll().stream().map(PostAllResponseDto::new).toList();
     }
 
     // 게시글 상세 조회

@@ -1,5 +1,6 @@
 package com.jhkwak.task.controller;
 
+import com.jhkwak.task.dto.PostAllResponseDto;
 import com.jhkwak.task.dto.PostRequestDto;
 import com.jhkwak.task.dto.PostResponseDto;
 import com.jhkwak.task.entity.Post;
@@ -30,7 +31,7 @@ public class PostController {
 
     // 게시글 전체 조회 Controller
     @GetMapping
-    public List<PostResponseDto> getAllPost() {
+    public List<PostAllResponseDto> getAllPost() {
 
         return postService.getAllPost();
 
